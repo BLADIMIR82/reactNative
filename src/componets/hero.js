@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
   tittletwo:{
     color: "blue",
     textAlign:"center",
+    fontSize: 18,
   },
    image: {
     flex: 1,

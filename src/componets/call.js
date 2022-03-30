@@ -33,7 +33,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   tittletwo:{
-    color: "blue",
+  color: "blue",
+  fontSize: 18,
    paddingBottom: 100,
    textAlign:"center",
   }

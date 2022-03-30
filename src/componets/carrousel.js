@@ -15,7 +15,7 @@ const Carr = () => (
       {cities.map((evento) => (
           <ImageBackground source={require("../images/hero.jpg")} style={styles.imagedos}>
         <View style={[styles.child, ]}>
-        {/* <Text>{evento.image}</Text> */}
+        <Text>{evento.image}</Text>
           <Text style={styles.text}>{evento.name}</Text>
         </View>
         </ImageBackground>

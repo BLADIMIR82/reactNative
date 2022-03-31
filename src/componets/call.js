@@ -22,13 +22,13 @@ export default function Call(){
 
 const styles = StyleSheet.create({
   call: {
-    height: 400,
+    height: 348,
     width: "100%",
   },
   image: {
     flex: 1,
     justifyContent: "center",
-    height:430,
+    height:350,
     padding: 40,
     alignItems: "center",
   },

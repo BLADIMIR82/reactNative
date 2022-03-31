@@ -3,7 +3,7 @@ import { View, Text, ScrollView, StyleSheet, ImageBackground, Image,} from "reac
 
 
 
-export default function  Hero(){
+export default function  Cities(){
     return (
         <ScrollView style={styles.Hero}>
       

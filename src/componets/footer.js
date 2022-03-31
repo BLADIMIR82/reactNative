@@ -22,13 +22,13 @@ const styles = StyleSheet.create({
   footer:{
     display: "flex",
     alignContent: "center",
-    height: 48,
+    height: 50,
     width: "100%",
-    backgroundColor:"gray",
+    backgroundColor:"#5D5B5A",
   },
   tittle:{
     fontSize: 15,
-    color: "black",
+    color: "#F8F3F2",
     textAlign: "center",
     paddingTop: 10,
  },

@@ -10,7 +10,6 @@ const Carr = () => (
       autoplayDelay={5}
       autoplayLoop
     
-      showPagination
      
     >
       {cities.map((evento) => (

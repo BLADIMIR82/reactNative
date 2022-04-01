@@ -1,16 +1,29 @@
 import { StyleSheet,  View, ScrollView } from 'react-native';
+import React from 'react';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from "react-redux";
+import thunk from "redux-thunk";
+import mainReducer from './redux/reducers/mainReducer';
+// import { NavigationContainer } from '@react-navigation/native';
+// import DrawerNavigator from './src/Navigation/Drawer';
+
 import Home from "./src/pages/home"
 import Cities from "./src/pages/cities"
 
+
 export default function App() {
+  const reduxStore = createStore(mainReducer, applyMiddleware(thunk))
+
   return (
+    <Provider store={reduxStore} style={{ height: '100%', width: '100%', flex: 1, flexDirection: 'column' }}>
     <ScrollView>
     <View style={styles.container}>
      <Home />
      <Cities />
     
     </View>
-    </ScrollView>   
+    </ScrollView> 
+    </Provider> 
    
   );
 }
@@ -22,4 +35,31 @@ const styles = StyleSheet.create({
    
   },
 });
-      
+ 
+
+// import { StatusBar } from 'expo-status-bar';
+// import { StyleSheet, Text, View, ScrollView, Image, Button } from 'react-native';
+// import React from 'react';
+// import { createStore, applyMiddleware } from 'redux';
+// import { Provider } from "react-redux";
+// import thunk from "redux-thunk";
+// import mainReducer from './redux/reducers/mainReducer';
+// import { NavigationContainer } from '@react-navigation/native';
+// import DrawerNavigator from './src/Navigation/Drawer';
+
+
+
+
+
+// export default function App() {
+//   const reduxStore = createStore(mainReducer, applyMiddleware(thunk))
+
+//   return (
+//     <Provider store={reduxStore} style={{ height: '100%', width: '100%', flex: 1, flexDirection: 'column' }}>
+//       <NavigationContainer>
+//           <StatusBar style="auto" backgroundColor='#17F5F9' />
+//           <DrawerNavigator/>
+//       </NavigationContainer>
+//     </Provider>
+//   );
+// }

@@ -4,6 +4,8 @@ import { SwiperFlatList } from "react-native-swiper-flatlist";
 import cities from "./datos";
 
 const Carr = () => (
+
+  
   <View style={styles.container}>
     <SwiperFlatList
       autoplay
@@ -13,7 +15,7 @@ const Carr = () => (
      
     >
       {cities.map((evento) => (
-          <ImageBackground source={{uri: evento.image}} style={styles.imagedos}>
+          <ImageBackground key={evento._id} source={{uri: evento.image}} style={styles.imagedos}>
         <View style={[styles.child, ]}>
           <Text style={styles.text}>{evento.name}</Text>
         </View>

@@ -3,6 +3,7 @@ import { StyleSheet, View, ScrollView} from 'react-native';
 import Hero from "../componets/hero"
 import Call from "../componets/call"
 import Carr from "../componets/carrousel";
+import Footer from "../componets/footer"
 
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
            <Hero />
         <Call /> 
         <Carr />
+        <Footer />
       </View>
          
       </ScrollView>   

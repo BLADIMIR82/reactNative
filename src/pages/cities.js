@@ -1,7 +1,7 @@
 import React from "react";
-import { StyleSheet, View, ScrollView, TextInput} from 'react-native';
+import { StyleSheet, View, ScrollView, TextInput, Text} from 'react-native';
 import Footer from "../componets/footer"
-import  HeroCities from "../componets/herocities"
+// import  HeroCities from "../componets/herocities"
 import  Cards from "../componets/cards"
 import { useEffect } from "react";
 import { connect } from 'react-redux';
@@ -25,7 +25,8 @@ function Cities(props) {
     return (
       <ScrollView>
       <View style={styles.container}>
-         <HeroCities />
+      <Text style={styles.tittletop}>Cities</Text>
+         {/* <HeroCities /> */}
          <View style={styles.containerdos}>
          <TextInput  style={styles.Input}  onChangeText={(text) =>{filterCards(text)} } type="text"  placeholder="Search City !!" /> 
          </View>
@@ -41,6 +42,7 @@ function Cities(props) {
   const styles = StyleSheet.create({
     container: {
      textAlign:"center",
+     backgroundColor:"#EEE8E8"
     },
     containerdos: {
       display:"flex",
@@ -48,11 +50,23 @@ function Cities(props) {
       textAlign:"center",
      },
     Input: {
-      width: 200,
+      width: 340,
       height:50,
+      marginTop: 10,
       marginLeft:10,
-      borderRadius: 1,
-      justifyContent:"center"
+      borderRadius: 20,
+      backgroundColor:"white",
+     
+      textAlign:"center",
+      marginBottom: 15,
+    },
+    tittletop:{
+      fontSize: 45,
+      textAlign:"center",
+      color:"black",
+      fontWeight: 'bold',
+      marginTop: 20,
+     
     }
   });
 

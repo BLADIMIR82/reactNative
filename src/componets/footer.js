@@ -5,13 +5,10 @@ export default function Footer(){
     return (
      
       
-        <ScrollView style={styles.footer}>
-         <View>
-        <View >
+        <ScrollView >
+         <View style={styles.footer}>
         <Text style={styles.tittle}> © 2022 Copyright | Bladimir Rojas | MindHub</Text>
-        </View>
         </View>   
-        
         </ScrollView>
    
   );

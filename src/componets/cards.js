@@ -1,47 +1,23 @@
 import * as React from 'react';
-import {  View, Text, Image, StyleSheet, ScrollView} from 'react-native';
-// import { useEffect } from "react";
-// import { connect } from 'react-redux';
-// import citiesActions from "../../redux/actions/citiesAction";
-
+import {  View, Text, Image, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 
 
 
 export default function  Cards(props){
 
-//   useEffect(() => {
-//     props.fetchearCities()
-   
-// }, [])
-
-
   return (
     <ScrollView>
       {props.cities?.length !== 0?(props.cities.map((evento, index) => (
-      <View style={styles.Cards}  key={index} >
+        <TouchableOpacity style={styles.Cards}  key={index} 
+        onPress={()=>props.navigation.navigate('details', {id:evento._id})}>  
+        {console.log(props)}   
           <Image source={{uri: `https://mytinerari-rojas.herokuapp.com/imagenes/${evento.image}`}} style={styles.image}/>
             <Text style={styles.tittle}>{evento.name}</Text>
-     </View>
+     </TouchableOpacity>
           ))): <Text style={styles.tittledos}>Sorry we did not find the city you are looking for!!</Text>}
       </ScrollView>
 );
 };
-
-
-// const mapDispatchToProps = {
-//   fetchearCities:citiesActions.fetchearCities,
-
-// }
-
-// const mapStateToProps = (state) => {
-//   return {
-//     cities:state.citiesReducer.cities,
-//     auxiliar: state.citiesReducer.auxiliar,
-
-//   }
-// }
-
-// export default connect(mapStateToProps, mapDispatchToProps)(Cards);
 
 
 const styles = StyleSheet.create({
@@ -79,7 +55,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     color: "white",
     textAlign: "center",
-    backgroundColor:"red"
+    backgroundColor:"#7B7878"
  },
  
 });

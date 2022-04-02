@@ -22,7 +22,7 @@ export default function  HeroCities(){
 
 const styles = StyleSheet.create({
   Hero: {
-    height: 350,
+    height: 230,
     width: "100%",
     marginTop: 5,
    

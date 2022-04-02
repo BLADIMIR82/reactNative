@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   footer:{
     display: "flex",
     alignContent: "center",
-    height: 50,
+    height: 64,
     width: "100%",
     backgroundColor:"#5D5B5A",
   },
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: "#F8F3F2",
     textAlign: "center",
-    paddingTop: 10,
+    paddingTop: 18,
  },
  
 });

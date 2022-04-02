@@ -5,15 +5,13 @@ export default function Call(){
     return (
         <ScrollView style={styles.call}>
       
-      <View>
-        <View>
+    
+        <View style={styles.call}>
         <ImageBackground source={require("../images/call.jpg")} style={styles.image}>
           <Text style={styles.tittletwo}>
           Come with us and discover the most beautiful cities in the world!
           </Text>
           </ImageBackground> 
-        </View>
-        
       </View>
     </ScrollView>
   );
@@ -22,18 +20,22 @@ export default function Call(){
 
 const styles = StyleSheet.create({
   call: {
-    height: 348,
+    display:"flex",
+    flexDirection:"column",
+    height: 530,
     width: "100%",
   },
   image: {
     flex: 1,
-    justifyContent: "center",
-    height:350,
-    padding: 40,
+    width:"100%",
     alignItems: "center",
+    resizeMode:"cover",
+    justifyContent: "center",
+    backgroundColor: "#EEE8E8",
   },
   tittletwo:{
   color: "blue",
+  fontWeight: 'bold',
   fontSize: 18,
    paddingBottom: 100,
    textAlign:"center",

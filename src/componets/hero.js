@@ -5,11 +5,10 @@ import { View, Text, ScrollView, StyleSheet, ImageBackground, Image,} from "reac
 
 export default function  Hero(){
     return (
-        <ScrollView style={styles.Hero}>
+        <ScrollView >
       
-      <View>
-        <View>
-        <ImageBackground source={require("../images/hero.jpg")} style={styles.image}>
+      <View style={styles.Hero}>
+        <ImageBackground source={require("../images/hero.jpg")}    style={styles.image}>
          <Image source={require("../images/logo.png")} style={styles.imagedos}/> 
           <Text style={styles.tittle}> MYtineraries</Text>
           <Text style={styles.tittletwo}>
@@ -17,7 +16,7 @@ export default function  Hero(){
                    cities!!
           </Text>
           </ImageBackground> 
-        </View>
+     
         
       </View>
     </ScrollView>
@@ -27,38 +26,34 @@ export default function  Hero(){
 
 const styles = StyleSheet.create({
   Hero: {
-    height: 350,
+    display:"flex",
+    flexDirection:"column",
+    height: 553,
     width: "100%",
-    marginTop: 5,
-   
   },
   image: {
     flex: 1,
-    justifyContent: "center",
-    height:450,
-    padding: 40,
+    width:"100%",
     alignItems: "center",
+    resizeMode:"cover",
+    justifyContent: "center",
+    backgroundColor: "#EEE8E8",
    
   },
   tittle:{
      marginBottom: 10,
-     fontSize: 25,
+     fontSize: 24,
      color: "blue",
      textAlign: "center",
+     fontWeight: 'bold',
   },
   tittletwo:{
     color: "blue",
     textAlign:"center",
-    fontSize: 18,
+    fontSize: 17,
+    fontWeight: 'bold',
   },
-   image: {
-    flex: 1,
-    justifyContent: "center",
-    height:450,
-    padding: 40,
-    alignItems: "center",
-    textAlign: "center",
-  },
+   
   imagedos:{
     height:50,
     width: 50,

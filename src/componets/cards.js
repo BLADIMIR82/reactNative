@@ -1,25 +1,24 @@
 import * as React from 'react';
 import {  View, Text, Image, StyleSheet, ScrollView} from 'react-native';
-
-import { useEffect } from "react";
-import { connect } from 'react-redux';
-import citiesActions from "../../redux/actions/citiesAction";
-
+// import { useEffect } from "react";
+// import { connect } from 'react-redux';
+// import citiesActions from "../../redux/actions/citiesAction";
 
 
 
-function  Cards(props){
 
-  useEffect(() => {
-    props.fetchearCities()
+export default function  Cards(props){
+
+//   useEffect(() => {
+//     props.fetchearCities()
    
-}, [])
+// }, [])
 
 
   return (
     <ScrollView style={styles.Cards}>
-      {props.cities.map((evento) => (
-      <View  >
+      {props.cities.map((evento, index) => (
+      <View key={index} >
           <Image source={{uri: `https://mytinerari-rojas.herokuapp.com/imagenes/${evento.image}`}} style={styles.image}/>
             <Text style={styles.tittle}>{evento.name}</Text>
            
@@ -30,20 +29,20 @@ function  Cards(props){
 };
 
 
-const mapDispatchToProps = {
-  fetchearCities:citiesActions.fetchearCities,
+// const mapDispatchToProps = {
+//   fetchearCities:citiesActions.fetchearCities,
 
-}
+// }
 
-const mapStateToProps = (state) => {
-  return {
-    cities:state.citiesReducer.cities,
-    auxiliar: state.citiesReducer.auxiliar,
+// const mapStateToProps = (state) => {
+//   return {
+//     cities:state.citiesReducer.cities,
+//     auxiliar: state.citiesReducer.auxiliar,
 
-  }
-}
+//   }
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Cards);
+// export default connect(mapStateToProps, mapDispatchToProps)(Cards);
 
 
 const styles = StyleSheet.create({

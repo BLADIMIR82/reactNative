@@ -4,27 +4,21 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import mainReducer from './redux/reducers/mainReducer';
-// import { NavigationContainer } from '@react-navigation/native';
-// import DrawerNavigator from './src/Navigation/Drawer';
-
-import Home from "./src/pages/home"
-import Cities from "./src/pages/cities"
+import { NavigationContainer } from '@react-navigation/native';
+import DrawerNavigator from './src/navigation/Drawer';
+import { StatusBar } from 'expo-status-bar';
 
 
 export default function App() {
   const reduxStore = createStore(mainReducer, applyMiddleware(thunk))
 
   return (
-    <Provider store={reduxStore} style={{ height: '100%', width: '100%', flex: 1, flexDirection: 'column' }}>
-    <ScrollView>
-    <View style={styles.container}>
-     <Home />
-     <Cities />
-    
-    </View>
-    </ScrollView> 
-    </Provider> 
-   
+
+    <Provider store={reduxStore}>
+      <NavigationContainer>
+        <DrawerNavigator/>
+      </NavigationContainer>
+    </Provider>
   );
 }
 

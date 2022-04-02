@@ -1,11 +1,12 @@
 import React from "react";
-import { Text, Dimensions, StyleSheet, View,  ImageBackground } from "react-native";
+import { Text, Dimensions, StyleSheet, View,  ImageBackground, Button} from "react-native";
 import { SwiperFlatList } from "react-native-swiper-flatlist";
 import cities from "./datos";
 
-const Carr = () => (
+const Carr = ({ navigation }) => (
 
-  
+<>
+    <Text  style={styles.tittletop}>Popular MYtineraries</Text>
   <View style={styles.container}>
     <SwiperFlatList
       autoplay
@@ -14,8 +15,8 @@ const Carr = () => (
     
      
     >
-      {cities.map((evento) => (
-          <ImageBackground key={evento._id} source={{uri: evento.image}} style={styles.imagedos}>
+      {cities.map((evento, index) => (
+          <ImageBackground key={index} source={{uri: evento.image}} style={styles.imagedos}>
         <View style={[styles.child, ]}>
           <Text style={styles.text}>{evento.name}</Text>
         </View>
@@ -23,31 +24,41 @@ const Carr = () => (
       ))}
     </SwiperFlatList>
   </View>
+  </>
 );
 
 const { width } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
   container: { 
-  
-     backgroundColor: "gray", 
-      height: 350,  
+     backgroundColor: "black", 
+      height: 484,  
       width: "100%",
-      padding: 6,
+      padding: 10,
     
-      
     },
-  child: { width, justifyContent: "center" },
+  
+  child: { width, justifyContent: "center",  },
   text: {textAlign: "center", 
-  fontSize: 24, 
-  backgroundColor: "#FE5436",
-  borderRadius: 2,
+  fontSize: 24,
+  borderTopRightRadius: 20,
+  backgroundColor: "#75777A",
+  color:"white",
+  
    },
   imagedos: {
    height:"100%",
    marginRight: 4,
+   borderTopRightRadius: 20,
+   
    
   },
+  tittletop:{
+    fontSize: 28,
+    textAlign:"center",
+    color:"white",
+    backgroundColor: "#75777A"
+  }
 });
 
 export default Carr;

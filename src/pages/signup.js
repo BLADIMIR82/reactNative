@@ -8,7 +8,7 @@ export default function SignUp({ navigation }){
         <ScrollView style={styles.SignUp}>
          <View>
         <View >
-        <Text style={styles.tittle}>Create your MyTinerary account !!t</Text>
+        <Text style={styles.tittle}>Create your MyTinerary account !!</Text>
         <TextInput  style={styles.Input}  placeholder="You First Name" />
         <TextInput  style={styles.Input}  placeholder="You First Lastname" />
         <TextInput  style={styles.Input}  placeholder="You email" />

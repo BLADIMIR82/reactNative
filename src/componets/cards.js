@@ -9,7 +9,7 @@ export default function  Cards(props){
     <ScrollView>
       {props.cities?.length !== 0?(props.cities.map((evento, index) => (
         <TouchableOpacity style={styles.Cards}  key={index} 
-        onPress={()=>props.navigation.navigate('details', {id:evento._id})}>  
+        onPress={()=>props.navigation.navigate('Cities', {id:evento._id})}>  
         {console.log(props)}   
           <Image source={{uri: `https://mytinerari-rojas.herokuapp.com/imagenes/${evento.image}`}} style={styles.image}/>
             <Text style={styles.tittle}>{evento.name}</Text>

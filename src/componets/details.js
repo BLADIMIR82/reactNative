@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {  View, Text, Image, StyleSheet, ScrollView} from 'react-native';
-import {useParams} from 'react-router-dom'
-import { useEffect, useState } from "react";
+import { useEffect, useState,   useLayoutEffect } from "react";
 import {connect} from "react-redux";
 import citiesActions from "../../redux/actions/citiesAction";
 
@@ -9,8 +8,8 @@ import citiesActions from "../../redux/actions/citiesAction";
 
 function  Details (props){
   
-    const {id} = useParams()
-    const [card, setCard] = useState({element:props.cities.find((i)=>i._id.toString()===id.toString())})
+  const [card, setCard] = useState({element:props.cities.find((i)=>i._id.toString()===id.toString())})
+  const { id } = route.params
   
   useEffect(()=>{
     if (props.cities.length < 1){

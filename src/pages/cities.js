@@ -1,7 +1,6 @@
 import React from "react";
 import { StyleSheet, View, ScrollView, TextInput, Text} from 'react-native';
 import Footer from "../componets/footer"
-// import  HeroCities from "../componets/herocities"
 import  Cards from "../componets/cards"
 import { useEffect } from "react";
 import { connect } from 'react-redux';
@@ -26,7 +25,6 @@ function Cities(props) {
       <ScrollView>
       <View style={styles.container}>
       <Text style={styles.tittletop}>Cities</Text>
-         {/* <HeroCities /> */}
          <View style={styles.containerdos}>
          <TextInput  style={styles.Input}  onChangeText={(text) =>{filterCards(text)} } type="text"  placeholder="Search City !!" /> 
          </View>
